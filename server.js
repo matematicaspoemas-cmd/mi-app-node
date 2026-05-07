@@ -1,43 +1,37 @@
 const express = require('express')
-
 const app = express()
 
 const PORT = process.env.PORT || 3000
 
+// middleware para recibir JSON
+app.use(express.json())
+
+// "base de datos" temporal en memoria
+let posts = []
+
+// página principal (frontend simple)
 app.get('/', (req, res) => {
   res.send(`
-    <html>
-      <head>
-        <title>Mi Primera App</title>
-      </head>
+    <h1>📸 Mini Instagram</h1>
 
-      <body style="
-        font-family: Arial;
-        background: #111;
-        color: white;
-        text-align: center;
-        padding-top: 50px;
-      ">
+    <form method="POST" action="/post">
+      <input name="texto" placeholder="Escribe algo..." />
+      <button>Publicar</button>
+    </form>
 
-        <h1>🚀 Mi App Node.js</h1>
+    <h2>Posts:</h2>
+    <div id="posts"></div>
 
-        <p>Servidor funcionando correctamente</p>
+    <script>
+      async function cargarPosts() {
+        const res = await fetch('/posts')
+        const data = await res.json()
 
-        <button onclick="mostrarMensaje()">
-          Haz clic aquí
-        </button>
+        document.getElementById('posts').innerHTML =
+          data.map(p => '<p>📌 ' + p.texto + '</p>').join('')
+      }
 
-        <script>
-          function mostrarMensaje() {
-            alert('Hola Alex 🚀')
-          }
-        </script>
-
-      </body>
-    </html>
+      cargarPosts()
+    </script>
   `)
-})
-
-app.listen(PORT, () => {
-  console.log('Servidor funcionando en puerto ' + PORT)
 })
