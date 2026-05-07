@@ -3,19 +3,18 @@ const app = express()
 
 const PORT = process.env.PORT || 3000
 
-// middleware para recibir JSON
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
-// "base de datos" temporal en memoria
 let posts = []
 
-// página principal (frontend simple)
+// Página principal
 app.get('/', (req, res) => {
   res.send(`
     <h1>📸 Mini Instagram</h1>
 
     <form method="POST" action="/post">
-      <input name="texto" placeholder="Escribe algo..." />
+      <input name="texto" placeholder="Escribe algo..." required />
       <button>Publicar</button>
     </form>
 
@@ -34,4 +33,25 @@ app.get('/', (req, res) => {
       cargarPosts()
     </script>
   `)
+})
+
+// crear post
+app.post('/post', (req, res) => {
+  const texto = req.body.texto
+
+  if (texto) {
+    posts.push({ texto })
+  }
+
+  res.redirect('/')
+})
+
+// ver posts
+app.get('/posts', (req, res) => {
+  res.json(posts)
+})
+
+// iniciar servidor
+app.listen(PORT, () => {
+  console.log('Mini Instagram corriendo en puerto ' + PORT)
 })
