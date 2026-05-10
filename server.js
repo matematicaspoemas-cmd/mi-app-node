@@ -10,6 +10,9 @@ const PORT = process.env.PORT || 3000
 // Middleware para recibir JSON
 app.use(express.json())
 
+// SERVIR ARCHIVOS PUBLICOS
+app.use(express.static('public'))
+
 // Página principal
 app.get('/', (req, res) => {
 
