@@ -93,11 +93,11 @@ app.get('/', (req, res) => {
 
         <script>
 
-          function mostrarMensaje(){
+          function irExamen(){
 
-            alert('🔥 Tu app Node.js funciona correctamente')
+  window.location.href='/speaking-test.html'
 
-          }
+}
 
         </script>
 
