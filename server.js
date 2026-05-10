@@ -84,9 +84,10 @@ app.get('/', (req, res) => {
             ✅ MySQL conectado
           </p>
 
-          <button onclick="mostrarMensaje()">
-            Probar App
-          </button>
+          <button onclick="irExamen()">
+  🎤 Ir al Examen
+</button>
+          
 
         </div>
 
