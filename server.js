@@ -35,79 +35,23 @@ res.send(`
 
     <title>DAXS ENGLISH IA</title>
 
-    <style>
-
-      body{
-        font-family: Arial;
-        background:#111;
-        color:white;
-        text-align:center;
-        padding-top:50px;
-      }
-
-      h1{
-        color:#00ff88;
-      }
-
-      .card{
-        background:#222;
-        padding:30px;
-        border-radius:15px;
-        width:80%;
-        max-width:600px;
-        margin:auto;
-        box-shadow:0 0 20px rgba(0,0,0,0.5);
-      }
-
-      button{
-        background:#00ff88;
-        border:none;
-        padding:15px 25px;
-        border-radius:10px;
-        cursor:pointer;
-        font-size:18px;
-        margin-top:20px;
-      }
-
-      button:hover{
-        opacity:0.8;
-      }
-
-      a{
-        text-decoration:none;
-      }
-
-    </style>
-
   </head>
 
-  <body>
+  <body style="background:#111;color:white;text-align:center;padding-top:100px;font-family:Arial;">
 
-    <div class="card">
+    <h1>🚀 DAXS ENGLISH IA</h1>
 
-      <h1>🚀 DAXS ENGLISH IA</h1>
+    <p>Servidor funcionando correctamente</p>
 
-      <p>
-        Plataforma funcionando correctamente
-      </p>
+    <a href="/speaking-test.html">
 
-      <p>
-        ✅ Express funcionando
-      </p>
+      <button style="padding:15px 30px;font-size:20px;cursor:pointer;">
 
-      <p>
-        ✅ MySQL conectado
-      </p>
+        🎤 Ir al Examen
 
-      <a href="/speaking-test.html">
+      </button>
 
-        <button>
-          🎤 Ir al Examen
-        </button>
-
-      </a>
-
-    </div>
+    </a>
 
   </body>
 
@@ -127,7 +71,7 @@ app.get('/api', (req, res) => {
 res.json({
 
 ```
-mensaje:'🚀 API funcionando correctamente',
+mensaje:'API funcionando',
 
 estado:'ok'
 ```
@@ -142,64 +86,7 @@ estado:'ok'
 
 app.get('/payment-response', (req, res) => {
 
-res.send(`
-
-```
-<html>
-
-  <head>
-
-    <title>Pago recibido</title>
-
-    <style>
-
-      body{
-        font-family:Arial;
-        background:#111;
-        color:white;
-        text-align:center;
-        padding-top:100px;
-      }
-
-      .card{
-        background:#222;
-        width:80%;
-        max-width:600px;
-        margin:auto;
-        padding:40px;
-        border-radius:20px;
-      }
-
-      h1{
-        color:#00ff88;
-      }
-
-    </style>
-
-  </head>
-
-  <body>
-
-    <div class="card">
-
-      <h1>✅ Pago recibido</h1>
-
-      <p>
-        Estamos verificando tu transacción con ePayco.
-      </p>
-
-      <p>
-        En unos segundos tu nivel será desbloqueado.
-      </p>
-
-    </div>
-
-  </body>
-
-</html>
-```
-
-`)
+res.send('✅ Pago recibido')
 
 })
 
@@ -209,36 +96,14 @@ res.send(`
 
 app.post('/payment-confirm', (req, res) => {
 
-console.log('🔥 Confirmación ePayco')
-
 console.log(req.body)
-
-// =========================
-// EJEMPLO VALIDACION
-// =========================
-
-const data = req.body
-
-if(data.x_cod_response == 1){
-
-```
-console.log('✅ PAGO APROBADO')
-```
-
-}else{
-
-```
-console.log('❌ PAGO NO APROBADO')
-```
-
-}
 
 res.send('ok')
 
 })
 
 // =========================
-// INICIAR SERVIDOR
+// SERVIDOR
 // =========================
 
 app.listen(PORT, () => {
