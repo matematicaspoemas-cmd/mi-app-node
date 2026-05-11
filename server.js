@@ -7,17 +7,11 @@ const app = express()
 
 const PORT = process.env.PORT || 3000
 
-// =========================
-// MIDDLEWARES
-// =========================
-
+// Middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended:true }))
 
-// =========================
-// ARCHIVOS PUBLICOS
-// =========================
-
+// Archivos públicos
 app.use(express.static('public'))
 
 // =========================
@@ -33,25 +27,77 @@ res.send(`
 
   <head>
 
-    <title>DAXS ENGLISH IA</title>
+    <title>Mi API Node.js</title>
+
+    <style>
+
+      body{
+        font-family: Arial;
+        background:#111;
+        color:white;
+        text-align:center;
+        padding-top:50px;
+      }
+
+      h1{
+        color:#00ff88;
+      }
+
+      .card{
+        background:#222;
+        padding:30px;
+        border-radius:15px;
+        width:80%;
+        max-width:600px;
+        margin:auto;
+        box-shadow:0 0 20px rgba(0,0,0,0.5);
+      }
+
+      button{
+        background:#00ff88;
+        border:none;
+        padding:15px 25px;
+        border-radius:10px;
+        cursor:pointer;
+        font-size:18px;
+        margin-top:20px;
+      }
+
+      button:hover{
+        opacity:0.8;
+      }
+
+    </style>
 
   </head>
 
-  <body style="background:#111;color:white;text-align:center;padding-top:100px;font-family:Arial;">
+  <body>
 
-    <h1>🚀 DAXS ENGLISH IA</h1>
+    <div class="card">
 
-    <p>Servidor funcionando correctamente</p>
+      <h1>🚀 Mi App Node.js</h1>
 
-    <a href="/speaking-test.html">
+      <p>
+        Servidor funcionando correctamente
+      </p>
 
-      <button style="padding:15px 30px;font-size:20px;cursor:pointer;">
+      <p>
+        ✅ Express funcionando
+      </p>
 
-        🎤 Ir al Examen
+      <p>
+        ✅ MySQL conectado
+      </p>
 
-      </button>
+      <a href="/speaking-test.html">
 
-    </a>
+        <button>
+          🎤 Ir al Examen
+        </button>
+
+      </a>
+
+    </div>
 
   </body>
 
@@ -63,7 +109,7 @@ res.send(`
 })
 
 // =========================
-// API TEST
+// API
 // =========================
 
 app.get('/api', (req, res) => {
@@ -71,7 +117,7 @@ app.get('/api', (req, res) => {
 res.json({
 
 ```
-mensaje:'API funcionando',
+mensaje:'🚀 API funcionando correctamente',
 
 estado:'ok'
 ```
@@ -81,7 +127,7 @@ estado:'ok'
 })
 
 // =========================
-// RESPUESTA EPAYCO
+// PAYMENT RESPONSE
 // =========================
 
 app.get('/payment-response', (req, res) => {
@@ -91,7 +137,7 @@ res.send('✅ Pago recibido')
 })
 
 // =========================
-// CONFIRMACION EPAYCO
+// PAYMENT CONFIRM
 // =========================
 
 app.post('/payment-confirm', (req, res) => {
