@@ -1,59 +1,113 @@
-exports.login = async (req, res) => {
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Login - DAXS</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 15px;
+  width: 320px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+.error {
+  color: #f87171;
+  text-align: center;
+  margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>🔐 Login</h2>
+
+  <input id="email" type="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+
+  <button onclick="login()">Entrar</button>
+
+  <div class="error" id="error"></div>
+
+  <p style="text-align:center;margin-top:15px;">
+    <a href="/register.html" style="color:#60a5fa;">Crear cuenta</a>
+  </p>
+</div>
+
+<script>
+async function login() {
+  const email = document.getElementById('email').value
+  const password = document.getElementById('password').value
+  const error = document.getElementById('error')
+
+  error.innerText = ""
+
   try {
-    const { email, password } = req.body
-
-    if (!email || !password) {
-      return res.status(400).json({ mensaje: 'Faltan datos' })
-    }
-
-    const [rows] = await pool.promise().query(
-      'SELECT * FROM users WHERE email = ?',
-      [email]
-    )
-
-    if (rows.length === 0) {
-      return res.status(400).json({ mensaje: 'Usuario no encontrado' })
-    }
-
-    const user = rows[0]
-
-    const passwordMatch = await bcrypt.compare(password, user.password)
-
-    if (!passwordMatch) {
-      return res.status(400).json({ mensaje: 'Contraseña incorrecta' })
-    }
-
-    if (!process.env.JWT_SECRET) {
-      return res.status(500).json({ mensaje: 'JWT_SECRET no configurado' })
-    }
-
-    const token = jwt.sign(
-      {
-        id: user.id,
-        nombre: user.nombre,
-        email: user.email,
-        rol: user.rol
+    const res = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
       },
-      process.env.JWT_SECRET,
-      { expiresIn: '7d' }
-    )
-
-    return res.json({
-      mensaje: 'Login exitoso',
-      token,
-      user: {
-        id: user.id,
-        nombre: user.nombre,
-        email: user.email,
-        rol: user.rol
-      }
+      body: JSON.stringify({ email, password })
     })
 
-  } catch (error) {
-    console.log('🔥 ERROR LOGIN:', error)
-    return res.status(500).json({
-      mensaje: 'Error en servidor',
-      error: error.message
-    })
+    const data = await res.json()
+
+    if (!res.ok) {
+      error.innerText = data.mensaje
+      return
+    }
+
+    // guardar sesión
+    localStorage.setItem('token', data.token)
+    localStorage.setItem('user', JSON.stringify(data.user))
+
+    // ir al dashboard
+    window.location.href = "/dashboard.html"
+
+  } catch (err) {
+    error.innerText = "Error en servidor"
   }
 }
+</script>
+
+</body>
+</html>
