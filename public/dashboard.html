@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background:#0f172a;
+  color:white;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width:220px;
+  height:100vh;
+  background:#111827;
+  position:fixed;
+  padding:20px;
+}
+
+/* MAIN */
+.main {
+  margin-left:240px;
+  padding:20px;
+}
+
+/* CARDS */
+.card {
+  background:#1f2937;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:15px;
+  transition:0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* BUTTON */
+button {
+  background:#ef4444;
+  border:none;
+  padding:10px;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+  width:100%;
+}
+
+button:hover {
+  background:#dc2626;
+}
+
+/* LOADING STYLE */
+.loading {
+  opacity:0.6;
+  font-style: italic;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>🚀 DAXS APP</h2>
+
+  <p id="userName" class="loading">Cargando usuario...</p>
+
+  <button onclick="logout()">Cerrar sesión</button>
+</div>
+
+<div class="main">
+
+  <h1>Dashboard</h1>
+
+  <div class="card">
+    <h3>📊 Estado del usuario</h3>
+    <p id="email" class="loading">Cargando...</p>
+    <p id="rol" class="loading">Cargando...</p>
+  </div>
+
+  <div class="card">
+    <h3>🔥 Progreso</h3>
+    <p>Lecciones completadas: 0</p>
+  </div>
+
+</div>
+
+<script>
+
+const token = localStorage.getItem('token')
+
+// 🔐 PROTEGER RUTA
+if (!token) {
+  window.location.href = "/login.html"
+}
+
+// 🧠 CARGAR USUARIO REAL DESDE BACKEND
+fetch('/perfil', {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer ' + token
+  }
+})
+.then(async res => {
+  const data = await res.json()
+
+  if (!res.ok) {
+    throw new Error(data.mensaje || 'Error de autenticación')
+  }
+
+  return data
+})
+.then(data => {
+
+  const user = data.user
+
+  document.getElementById('userName').innerText = "👤 " + user.nombre
+  document.getElementById('email').innerText = "Email: " + user.email
+  document.getElementById('rol').innerText = "Rol: " + user.rol
+
+})
+.catch(err => {
+
+  console.log(err)
+
+  localStorage.removeItem('token')
+  localStorage.removeItem('user')
+
+  window.location.href = "/login.html"
+})
+
+// 🚪 LOGOUT
+function logout() {
+  localStorage.removeItem('token')
+  localStorage.removeItem('user')
+  window.location.href = "/login.html"
+}
+
+</script>
+
+</body>
+</html>

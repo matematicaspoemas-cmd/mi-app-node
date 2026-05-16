@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  color:white;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding:40px;
+  border-radius:15px;
+  width:320px;
+}
+
+input {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+}
+
+button {
+  width:100%;
+  padding:12px;
+  background:#22c55e;
+  border:none;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h2>🧾 Registro</h2>
+
+<input id="nombre" placeholder="Nombre">
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="register()">Crear cuenta</button>
+</div>
+
+<script>
+async function register() {
+  const res = await fetch('/api/auth/register', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({
+      nombre: nombre.value,
+      email: email.value,
+      password: password.value
+    })
+  })
+
+  const data = await res.json()
+
+  alert(data.mensaje)
+
+  if (res.ok) {
+    window.location.href = "/login.html"
+  }
+}
+</script>
+
+</body>
+</html>
