@@ -33,7 +33,13 @@ fetch('/perfil', {
 .then(data => {
 
   const user = data.user
+if(user.foto_perfil){
 
+  document.getElementById('fotoPerfil').src =
+
+    '/uploads/images/' + user.foto_perfil
+
+}
   document.getElementById('userName').innerText =
     "👤 " + user.nombre
 

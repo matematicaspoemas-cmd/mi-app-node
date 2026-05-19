@@ -2,7 +2,12 @@ const path = require('path')
 const dotenv = require('dotenv')
 
 // 🔥 CARGA SEGURA DEL .env
-dotenv.config({ path: path.resolve(__dirname, '.env') })
+
+dotenv.config({
+
+  path: path.resolve(__dirname, '.env')
+
+})
 
 console.log("JWT:", process.env.JWT_SECRET)
 
@@ -13,8 +18,9 @@ const db = require('./db')
 const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoutes')
 
-const { verificarToken } =
-  require('./middlewares/authMiddleware')
+const {
+  verificarToken
+} = require('./middlewares/authMiddleware')
 
 const app = express()
 
@@ -26,22 +32,41 @@ app.use(express.json())
 
 // 🔥 FRONTEND PUBLIC
 
-app.use(express.static('public'))
+app.use(
+
+  express.static('public')
+
+)
 
 // 🔥 SERVIR UPLOADS
 
 app.use(
+
   '/uploads',
+
   express.static('uploads')
+
 )
 
 // 🔐 AUTH ROUTES
 
-app.use('/api/auth', authRoutes)
+app.use(
+
+  '/api/auth',
+
+  authRoutes
+
+)
 
 // 👤 USER ROUTES
 
-app.use('/api/users', userRoutes)
+app.use(
+
+  '/api/users',
+
+  userRoutes
+
+)
 
 // 🧪 HOME
 
@@ -112,30 +137,75 @@ app.get('/api', (req, res) => {
   res.json({
 
     mensaje: 'API funcionando',
+
     estado: 'ok'
 
   })
 
 })
 
-// 🔐 RUTA PROTEGIDA TEST
+// 🔐 PERFIL REAL DESDE MYSQL
 
-app.get('/perfil', verificarToken, (req, res) => {
+app.get(
 
-  res.json({
+  '/perfil',
 
-    mensaje: 'Acceso permitido 🔐',
+  verificarToken,
 
-    user: req.user
+  async (req, res) => {
 
-  })
+    try{
 
-})
+      const [rows] = await db.promise().query(
+
+        'SELECT * FROM users WHERE id = ?',
+
+        [req.user.id]
+
+      )
+
+      if(rows.length === 0){
+
+        return res.status(404).json({
+
+          mensaje:'Usuario no encontrado'
+
+        })
+
+      }
+
+      res.json({
+
+        mensaje:'Acceso permitido 🔐',
+
+        user: rows[0]
+
+      })
+
+    }catch(error){
+
+      console.log(error)
+
+      res.status(500).json({
+
+        mensaje:'Error servidor'
+
+      })
+
+    }
+
+  }
+
+)
 
 // 🚀 START SERVER
 
 app.listen(PORT, () => {
 
-  console.log(`Servidor funcionando en puerto ${PORT}`)
+  console.log(
+
+    `Servidor funcionando en puerto ${PORT}`
+
+  )
 
 })
