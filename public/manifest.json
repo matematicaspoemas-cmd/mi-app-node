@@ -1,0 +1,25 @@
+{
+  "name": "DAXS ENGLISH IA",
+  "short_name": "DAXS",
+  "start_url": "/login.html",
+  "display": "standalone",
+
+  "background_color": "#0f172a",
+  "theme_color": "#00d9ff",
+
+  "icons": [
+
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+
+  ]
+}
