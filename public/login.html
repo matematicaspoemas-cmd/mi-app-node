@@ -1,49 +1,26 @@
-<!DOCTYPE html>
 <html lang="es">
 
 <head>
-
   <meta charset="UTF-8">
-
   <title>Login - DAXS</title>
-
   <link rel="stylesheet" href="/css/login.css">
-
 </head>
 
-<body>
+<body class="page">
 
-  <div class="card">
+  <div class="card animate-in">
 
     <h2>🔐 Login</h2>
 
-    <input
-      id="email"
-      type="email"
-      placeholder="Email"
-    >
+    <input id="email" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
 
-    <input
-      id="password"
-      type="password"
-      placeholder="Password"
-    >
+    <button id="loginBtn">Entrar</button>
 
-   <button id="loginBtn">
-  Entrar
-</button>
-
-    <div
-      class="error"
-      id="error"
-    ></div>
+    <div class="error" id="error"></div>
 
     <p class="registerText">
-
-      <a href="/register.html">
-        Crear cuenta
-      </a>
-
+      <a href="/register.html">Crear cuenta</a>
     </p>
 
   </div>
