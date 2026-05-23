@@ -68,7 +68,8 @@ async function guardarPerfil(){
         method:'PUT',
 
         headers:{
-          Authorization: 'Bearer ' + token
+          Authorization:
+            'Bearer ' + token
         },
 
         body: formData
@@ -105,6 +106,17 @@ async function guardarPerfil(){
 
 function volverDashboard(){
 
-  window.location.href = '/dashboard.html'
+  window.location.href =
+    '/dashboard.html'
 
 }
+
+/* ===== EVENTOS ===== */
+
+document
+  .getElementById('guardarBtn')
+  .addEventListener('click', guardarPerfil)
+
+document
+  .getElementById('volverBtn')
+  .addEventListener('click', volverDashboard)

@@ -1,17 +1,11 @@
 const path = require('path')
 const dotenv = require('dotenv')
-
-// 🔥 CARGA SEGURA DEL .env
+const express = require('express')
+const helmet = require('helmet')
 
 dotenv.config({
-
   path: path.resolve(__dirname, '.env')
-
 })
-
-console.log("JWT:", process.env.JWT_SECRET)
-
-const express = require('express')
 
 const db = require('./db')
 
@@ -26,125 +20,61 @@ const app = express()
 
 const PORT = process.env.PORT || 3000
 
-// 🔧 MIDDLEWARES
+/* ===== MIDDLEWARES ===== */
+
+app.use(helmet())
 
 app.use(express.json())
 
-// 🔥 FRONTEND PUBLIC
+/* ===== FRONTEND ===== */
 
 app.use(
-
-  express.static('public')
-
+  express.static(
+    path.join(__dirname, 'public')
+  )
 )
 
-// 🔥 SERVIR UPLOADS
+/* ===== UPLOADS ===== */
 
 app.use(
-
   '/uploads',
-
-  express.static('uploads')
-
+  express.static(
+    path.join(__dirname, 'uploads')
+  )
 )
 
-// 🔐 AUTH ROUTES
+/* ===== ROUTES ===== */
 
-app.use(
+app.use('/api/auth', authRoutes)
 
-  '/api/auth',
+app.use('/api/users', userRoutes)
 
-  authRoutes
-
-)
-
-// 👤 USER ROUTES
-
-app.use(
-
-  '/api/users',
-
-  userRoutes
-
-)
-
-// 🧪 HOME
+/* ===== HOME ===== */
 
 app.get('/', (req, res) => {
 
-  res.send(`
-
-    <html>
-
-      <head>
-
-        <title>DAXS ENGLISH IA</title>
-
-      </head>
-
-      <body style="
-        background:#111;
-        color:white;
-        text-align:center;
-        padding-top:100px;
-        font-family:Arial;
-      ">
-
-        <h1>🚀 DAXS ENGLISH IA</h1>
-
-        <p>
-          Sistema funcionando correctamente
-        </p>
-
-        <a href="/login.html">
-
-          <button style="
-            padding:10px 20px;
-            cursor:pointer;
-          ">
-
-            🔐 Login
-
-          </button>
-
-        </a>
-
-        <a href="/register.html">
-
-          <button style="
-            padding:10px 20px;
-            cursor:pointer;
-          ">
-
-            📝 Registro
-
-          </button>
-
-        </a>
-
-      </body>
-
-    </html>
-
-  `)
+  res.sendFile(
+    path.join(
+      __dirname,
+      'public',
+      'index.html'
+    )
+  )
 
 })
 
-// 🧪 API TEST
+/* ===== API TEST ===== */
 
 app.get('/api', (req, res) => {
 
   res.json({
-
-    mensaje: 'API funcionando',
-
+    mensaje: 'API funcionando 🚀',
     estado: 'ok'
-
   })
 
 })
 
-// 🔐 PERFIL REAL DESDE MYSQL
+/* ===== PERFIL ===== */
 
 app.get(
 
@@ -154,15 +84,16 @@ app.get(
 
   async (req, res) => {
 
-    try{
+    try {
 
-      const [rows] = await db.promise().query(
+      const [rows] =
+        await db.promise().query(
 
-        'SELECT * FROM users WHERE id = ?',
+          'SELECT * FROM users WHERE id = ?',
 
-        [req.user.id]
+          [req.user.id]
 
-      )
+        )
 
       if(rows.length === 0){
 
@@ -176,13 +107,11 @@ app.get(
 
       res.json({
 
-        mensaje:'Acceso permitido 🔐',
-
         user: rows[0]
 
       })
 
-    }catch(error){
+    } catch(error){
 
       console.log(error)
 
@@ -198,14 +127,12 @@ app.get(
 
 )
 
-// 🚀 START SERVER
+/* ===== START SERVER ===== */
 
 app.listen(PORT, () => {
 
   console.log(
-
     `Servidor funcionando en puerto ${PORT}`
-
   )
 
 })

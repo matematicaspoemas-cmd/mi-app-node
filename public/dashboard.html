@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
 <title>Dashboard</title>
 
-<link rel="stylesheet" href="/css/dashboard.css">
+<link rel="stylesheet"
+      href="/css/dashboard.css">
 
 </head>
 
@@ -14,20 +20,22 @@
 <div class="sidebar">
 
   <h2>🚀 DAXS APP</h2>
-<img
-  id="fotoPerfil"
-  src="https://i.imgur.com/6VBx3io.png"
-  class="fotoPerfil"
-/>
+
+  <img
+    id="fotoPerfil"
+    src="/assets/default.png"
+    class="fotoPerfil"
+  />
+
   <p id="userName" class="loading">
     Cargando usuario...
   </p>
 
-  <button onclick="irPerfil()">
+  <button id="perfilBtn">
     👤 Actualizar Perfil
   </button>
 
-  <button onclick="logout()">
+  <button id="logoutBtn">
     🚪 Cerrar sesión
   </button>
 

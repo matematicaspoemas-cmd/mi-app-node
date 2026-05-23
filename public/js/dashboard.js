@@ -1,9 +1,13 @@
 const token = localStorage.getItem('token')
 
+console.log("TOKEN:", token)
+
 // 🔐 PROTEGER RUTA
 
 if (!token) {
+
   window.location.href = "/login.html"
+
 }
 
 // 🧠 CARGAR USUARIO
@@ -13,7 +17,9 @@ fetch('/perfil', {
   method: 'GET',
 
   headers: {
+
     Authorization: 'Bearer ' + token
+
   }
 
 })
@@ -23,7 +29,11 @@ fetch('/perfil', {
   const data = await res.json()
 
   if (!res.ok) {
-    throw new Error(data.mensaje || 'Error auth')
+
+    throw new Error(
+      data.mensaje || 'Error auth'
+    )
+
   }
 
   return data
@@ -33,43 +43,57 @@ fetch('/perfil', {
 .then(data => {
 
   const user = data.user
-if(user.foto_perfil){
 
-  document.getElementById('fotoPerfil').src =
+  // 📸 FOTO PERFIL
 
-    '/uploads/images/' + user.foto_perfil
+  if(user.foto_perfil){
 
-}
-  document.getElementById('userName').innerText =
+    document
+      .getElementById('fotoPerfil')
+      .src =
+      '/uploads/images/' +
+      user.foto_perfil
+
+  }
+
+  // 👤 NOMBRE
+
+  document
+    .getElementById('userName')
+    .innerText =
     "👤 " + user.nombre
 
-  document.getElementById('email').innerText =
+  // 📧 EMAIL
+
+  document
+    .getElementById('email')
+    .innerText =
     "Email: " + user.email
 
-  document.getElementById('rol').innerText =
+  // 🔐 ROL
+
+  document
+    .getElementById('rol')
+    .innerText =
     "Rol: " + user.rol
 
 })
 
 .catch(err => {
 
-  console.log(err)
-
-  localStorage.removeItem('token')
-  localStorage.removeItem('user')
-
-  window.location.href = "/login.html"
+  console.log("ERROR DASHBOARD:", err)
 
 })
-
 // 🚪 LOGOUT
 
 function logout(){
 
   localStorage.removeItem('token')
+
   localStorage.removeItem('user')
 
-  window.location.href = "/login.html"
+  window.location.href =
+    "/login.html"
 
 }
 
@@ -77,6 +101,17 @@ function logout(){
 
 function irPerfil(){
 
-  window.location.href = "/perfil.html"
+  window.location.href =
+    "/perfil.html"
 
 }
+
+/* ===== BOTONES ===== */
+
+document
+  .getElementById('logoutBtn')
+  .addEventListener('click', logout)
+
+document
+  .getElementById('perfilBtn')
+  .addEventListener('click', irPerfil)
