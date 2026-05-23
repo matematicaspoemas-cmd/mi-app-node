@@ -1,113 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<title>Login - DAXS</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: white;
-}
+  <meta charset="UTF-8">
 
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 40px;
-  border-radius: 15px;
-  width: 320px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
+  <title>Login - DAXS</title>
 
-input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 8px;
-}
+  <link rel="stylesheet" href="/css/login.css">
 
-button {
-  width: 100%;
-  padding: 12px;
-  background: #3b82f6;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #2563eb;
-}
-
-.error {
-  color: #f87171;
-  text-align: center;
-  margin-top: 10px;
-}
-</style>
 </head>
 
 <body>
 
-<div class="card">
-  <h2>🔐 Login</h2>
+  <div class="card">
 
-  <input id="email" type="email" placeholder="Email">
-  <input id="password" type="password" placeholder="Password">
+    <h2>🔐 Login</h2>
 
-  <button onclick="login()">Entrar</button>
+    <input
+      id="email"
+      type="email"
+      placeholder="Email"
+    >
 
-  <div class="error" id="error"></div>
+    <input
+      id="password"
+      type="password"
+      placeholder="Password"
+    >
 
-  <p style="text-align:center;margin-top:15px;">
-    <a href="/register.html" style="color:#60a5fa;">Crear cuenta</a>
-  </p>
-</div>
+    <button onclick="login()">
+      Entrar
+    </button>
 
-<script>
-async function login() {
-  const email = document.getElementById('email').value
-  const password = document.getElementById('password').value
-  const error = document.getElementById('error')
+    <div
+      class="error"
+      id="error"
+    ></div>
 
-  error.innerText = ""
+    <p class="registerText">
 
-  try {
-    const res = await fetch('/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email, password })
-    })
+      <a href="/register.html">
+        Crear cuenta
+      </a>
 
-    const data = await res.json()
+    </p>
 
-    if (!res.ok) {
-      error.innerText = data.mensaje
-      return
-    }
+  </div>
 
-    // guardar sesión
-    localStorage.setItem('token', data.token)
-    localStorage.setItem('user', JSON.stringify(data.user))
-
-    // ir al dashboard
-    window.location.href = "/dashboard.html"
-
-  } catch (err) {
-    error.innerText = "Error en servidor"
-  }
-}
-</script>
+  <script src="/js/login.js"></script>
 
 </body>
+
 </html>
