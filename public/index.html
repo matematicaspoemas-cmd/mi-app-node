@@ -3,41 +3,111 @@
 
 <head>
 
+  <!-- ===== META ===== -->
+
   <meta charset="UTF-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>DAXS ENGLISH IA</title>
 
-  <link rel="stylesheet"
-        href="./css/style.css">
+  <!-- ===== SEO ===== -->
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap"
-        rel="stylesheet">
+  <meta
+    name="description"
+    content="DAXS ENGLISH IA - Plataforma moderna para aprender inglés con inteligencia artificial."
+  >
+
+  <!-- ===== THEME ===== -->
+
+  <meta
+    name="theme-color"
+    content="#00d9ff"
+  >
+
+  <!-- ===== IOS PWA ===== -->
+
+  <meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  >
+
+  <!-- ===== MANIFEST ===== -->
+
+  <link
+    rel="manifest"
+    href="/manifest.json"
+  >
+
+  <!-- ===== GOOGLE FONT ===== -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- ===== CSS ===== -->
+
+  <link
+    rel="stylesheet"
+    href="/css/style.css"
+  >
 
 </head>
 
-<body>
+<body class="page">
+
+  <!-- ===== BACKGROUND EFFECT ===== -->
 
   <div class="background-glow"></div>
 
-  <div class="container">
+  <!-- ===== MAIN CONTAINER ===== -->
 
-    <div class="card">
+  <main class="container">
 
-      <h1>🚀 DAXS ENGLISH IA</h1>
+    <!-- ===== CARD ===== -->
 
-      <p>
-        Sistema funcionando correctamente
+    <section class="card animate-in">
+
+      <!-- ===== LOGO / TITLE ===== -->
+
+      <div class="logo-area">
+
+        <h1>
+          🚀 DAXS ENGLISH IA
+        </h1>
+
+        <p>
+          Aprende inglés con tecnología moderna
+        </p>
+
+      </div>
+
+      <!-- ===== DESCRIPTION ===== -->
+
+      <p class="description">
+
+        Plataforma inteligente diseñada para
+        PC, tablet y celular.
+
       </p>
+
+      <!-- ===== BUTTONS ===== -->
 
       <div class="buttons">
 
         <a href="/login.html">
 
           <button>
-            🔐 Login
+            🔐 Iniciar Sesión
           </button>
 
         </a>
@@ -45,17 +115,29 @@
         <a href="/register.html">
 
           <button>
-            📝 Registro
+            📝 Crear Cuenta
           </button>
 
         </a>
 
+        <!-- ===== INSTALL APP ===== -->
+
+        <button
+          id="installBtn"
+          style="display:none;"
+        >
+          📲 Instalar App
+        </button>
+
       </div>
 
-    </div>
+    </section>
 
-  </div>
-<script src="/js/app.js"></script>
+  </main>
+
+  <!-- ===== APP JS ===== -->
+
+  <script src="/js/app.js"></script>
 
 </body>
 
