@@ -12,6 +12,8 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <!-- ===== TITLE ===== -->
+
   <title>DAXS ENGLISH IA</title>
 
   <!-- ===== SEO ===== -->
@@ -21,14 +23,14 @@
     content="DAXS ENGLISH IA - Plataforma moderna para aprender inglés con inteligencia artificial."
   >
 
-  <!-- ===== THEME ===== -->
+  <!-- ===== THEME COLOR ===== -->
 
   <meta
     name="theme-color"
     content="#00d9ff"
   >
 
-  <!-- ===== IOS PWA ===== -->
+  <!-- ===== PWA IOS ===== -->
 
   <meta
     name="apple-mobile-web-app-capable"
@@ -45,6 +47,22 @@
   <link
     rel="manifest"
     href="/manifest.json"
+  >
+
+  <!-- ===== FAVICON ===== -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/assets/icons/icon-192.png"
+  >
+
+  <!-- ===== IOS ICON ===== -->
+
+  <link
+    rel="apple-touch-icon"
+    href="/assets/icons/icon-192.png"
   >
 
   <!-- ===== GOOGLE FONT ===== -->
@@ -69,7 +87,7 @@
 
   <div class="background-glow"></div>
 
-  <!-- ===== MAIN CONTAINER ===== -->
+  <!-- ===== MAIN ===== -->
 
   <main class="container">
 
@@ -77,9 +95,15 @@
 
     <section class="card animate-in">
 
-      <!-- ===== LOGO / TITLE ===== -->
+      <!-- ===== LOGO AREA ===== -->
 
       <div class="logo-area">
+
+        <img
+          src="/assets/icons/icon-192.png"
+          alt="Logo DAXS"
+          class="logo"
+        >
 
         <h1>
           🚀 DAXS ENGLISH IA
@@ -96,7 +120,8 @@
       <p class="description">
 
         Plataforma inteligente diseñada para
-        PC, tablet y celular.
+        funcionar perfectamente en PC,
+        tablet y celular.
 
       </p>
 
@@ -104,26 +129,31 @@
 
       <div class="buttons">
 
+        <!-- LOGIN -->
+
         <a href="/login.html">
 
-          <button>
+          <button type="button">
             🔐 Iniciar Sesión
           </button>
 
         </a>
 
+        <!-- REGISTER -->
+
         <a href="/register.html">
 
-          <button>
+          <button type="button">
             📝 Crear Cuenta
           </button>
 
         </a>
 
-        <!-- ===== INSTALL APP ===== -->
+        <!-- INSTALL APP -->
 
         <button
           id="installBtn"
+          type="button"
           style="display:none;"
         >
           📲 Instalar App
