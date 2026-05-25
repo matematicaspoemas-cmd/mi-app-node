@@ -2,17 +2,33 @@ const express = require('express')
 
 const router = express.Router()
 
-const { verificarToken } = require('../middlewares/authMiddleware')
+const {
+  verificarToken
+} = require('../middlewares/authMiddleware')
 
-const upload = require('../middlewares/uploadMiddleware')
+const upload =
+require('../middlewares/uploadMiddleware')
 
 const {
 
+  obtenerPerfil,
   actualizarPerfil
 
 } = require('../controllers/userController')
 
-// ACTUALIZAR PERFIL
+// ===== OBTENER PERFIL =====
+
+router.get(
+
+  '/perfil',
+
+  verificarToken,
+
+  obtenerPerfil
+
+)
+
+// ===== ACTUALIZAR PERFIL =====
 
 router.put(
 

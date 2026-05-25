@@ -11,7 +11,8 @@ const db = require('./db')
 
 const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoutes')
-
+const passwordRoutes =
+require('./routes/passwordRoutes')
 const {
   verificarToken
 } = require('./middlewares/authMiddleware')
@@ -48,6 +49,7 @@ app.use(
 app.use('/api/auth', authRoutes)
 
 app.use('/api/users', userRoutes)
+app.use('/api/password', passwordRoutes)
 
 /* ===== HOME ===== */
 

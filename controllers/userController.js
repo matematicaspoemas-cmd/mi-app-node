@@ -1,6 +1,68 @@
 const pool = require('../db')
 
-// ACTUALIZAR PERFIL
+// ===== OBTENER PERFIL =====
+
+exports.obtenerPerfil = async (req, res) => {
+
+  try {
+
+    const userId = req.user.id
+
+    const [rows] = await pool.promise().query(
+
+      `
+      SELECT
+        id,
+        nombre,
+        apellido,
+        email,
+        celular,
+        pais,
+        ciudad,
+        idioma_nativo,
+        objetivo,
+        biografia,
+        rol,
+        foto_perfil
+      FROM users
+      WHERE id = ?
+      `,
+
+      [userId]
+
+    )
+
+    if(rows.length === 0){
+
+      return res.status(404).json({
+
+        mensaje:'Usuario no encontrado'
+
+      })
+
+    }
+
+    res.json({
+
+      user: rows[0]
+
+    })
+
+  } catch(error){
+
+    console.log(error)
+
+    res.status(500).json({
+
+      mensaje:'Error servidor'
+
+    })
+
+  }
+
+}
+
+// ===== ACTUALIZAR PERFIL =====
 
 exports.actualizarPerfil = async (req, res) => {
 
@@ -23,7 +85,7 @@ exports.actualizarPerfil = async (req, res) => {
 
     let foto_perfil = null
 
-    // SI SUBE FOTO
+    // ===== SI SUBE FOTO =====
 
     if(req.file){
 
@@ -72,7 +134,7 @@ exports.actualizarPerfil = async (req, res) => {
 
     res.json({
 
-      mensaje: 'Perfil actualizado correctamente'
+      mensaje:'Perfil actualizado correctamente'
 
     })
 
