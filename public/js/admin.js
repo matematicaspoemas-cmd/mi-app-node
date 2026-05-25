@@ -1,91 +1,77 @@
-const token =
-localStorage.getItem('token')
+const token = localStorage.getItem('token')
 
-if(!token){
-
-  window.location.href =
-  '/login.html'
-
+// 🔐 VALIDACIÓN INICIAL
+if (!token) {
+  window.location.href = '/login.html'
 }
 
 /* ===== LOGOUT ===== */
-
-function logout(){
-
+function logout() {
   localStorage.removeItem('token')
-
-  window.location.href =
-  '/login.html'
-
+  localStorage.removeItem('user')
+  window.location.href = '/login.html'
 }
 
 /* ===== CARGAR ADMIN ===== */
+async function cargarAdmin() {
 
-async function cargarAdmin(){
+  try {
 
-  try{
-
-    const res = await fetch(
-
-      '/api/users/perfil',
-
-      {
-
-        headers:{
-          Authorization:
-          'Bearer ' + token
-        }
-
+    const res = await fetch('/api/users/perfil', {
+      headers: {
+        Authorization: 'Bearer ' + token
       }
-
-    )
+    })
 
     const data = await res.json()
 
-    if(!res.ok){
-
-      throw new Error(data.mensaje)
-
+    if (!res.ok) {
+      throw new Error(data.mensaje || "Error al cargar usuario")
     }
 
     const user = data.user
 
-    /* ===== VALIDAR ADMIN ===== */
+    // 🔐 ROL UNIFICADO
+    const role = user.rol || user.role
 
-    if(user.rol !== 'admin'){
+    if (role !== 'admin') {
 
       alert('Acceso denegado')
 
-      window.location.href =
-      '/dashboard.html'
+      localStorage.removeItem('token')
+      localStorage.removeItem('user')
 
+      window.location.href = '/student/dashboard.html'
       return
-
     }
 
-    document
-    .getElementById('adminName')
-    .innerText = user.nombre
+    // 💾 sincronizar localStorage
+    localStorage.setItem('user', JSON.stringify(user))
 
-    if(user.foto_perfil){
-
-      document
-      .getElementById('adminPhoto')
-      .src =
-      '/uploads/images/' +
-      user.foto_perfil
-
+    // 👤 nombre admin
+    const nameEl = document.getElementById('adminName')
+    if (nameEl) {
+      nameEl.innerText = user.nombre || 'Admin'
     }
 
-  }catch(error){
+    // 🖼 foto admin
+    const photoEl = document.getElementById('adminPhoto')
+    if (photoEl) {
+      photoEl.src = user.foto_perfil
+        ? '/uploads/images/' + user.foto_perfil
+        : '/assets/default-user.png'
+    }
 
-    console.log(error)
+  } catch (error) {
 
-    window.location.href =
-    '/login.html'
+    console.error(error)
 
+    // 🔥 limpieza de seguridad
+    localStorage.removeItem('token')
+    localStorage.removeItem('user')
+
+    window.location.href = '/login.html'
   }
-
 }
 
 cargarAdmin()

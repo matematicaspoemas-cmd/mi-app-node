@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - DAXS</title>
+
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 🔐 PROTECCIÓN -->
+<script>
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (!user || user.rol !== "admin") {
+    window.location.href = "/login.html";
+  }
+</script>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>⚡ DAXS</h2>
+      <p>Admin Panel</p>
+    </div>
+
+    <nav>
+      <button onclick="showSection('levels')">📚 Niveles</button>
+      <button onclick="showSection('lessons')">🧠 Lecciones</button>
+      <button onclick="showSection('files')">📂 Archivos</button>
+    </nav>
+
+    <button class="logout" onclick="logout()">🚪 Salir</button>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="topbar">
+      <h1>Bienvenido, <span id="adminName">Admin</span> 👑</h1>
+    </header>
+
+    <!-- CARDS -->
+    <section class="cards">
+
+      <div class="card">
+        <h3>Niveles</h3>
+        <p>0</p>
+      </div>
+
+      <div class="card">
+        <h3>Lecciones</h3>
+        <p>0</p>
+      </div>
+
+      <div class="card">
+        <h3>Usuarios</h3>
+        <p>0</p>
+      </div>
+
+    </section>
+
+    <!-- SECTIONS -->
+
+    <section id="levels" class="section active">
+
+      <h2>📚 Crear Nivel</h2>
+
+      <div class="form">
+        <input id="levelName" placeholder="Nombre del nivel">
+        <button onclick="createLevel()">Crear</button>
+      </div>
+
+    </section>
+
+    <section id="lessons" class="section">
+
+      <h2>🧠 Crear Lección</h2>
+
+      <div class="form">
+        <input id="lessonTitle" placeholder="Título">
+        <textarea id="lessonContent" placeholder="Contenido"></textarea>
+        <button onclick="createLesson()">Guardar</button>
+      </div>
+
+    </section>
+
+    <section id="files" class="section">
+
+      <h2>📂 Subir Archivo</h2>
+
+      <div class="form">
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Subir</button>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="/js/admin.js"></script>
+
+</body>
+</html>

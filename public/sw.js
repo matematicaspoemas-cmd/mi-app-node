@@ -1,125 +1,71 @@
-const CACHE_NAME = 'daxs-cache-v1'
+cconst CACHE_NAME = 'daxs-cache-v2'
 
 const urlsToCache = [
-
   '/',
-
   '/index.html',
-
   '/login.html',
-
   '/register.html',
 
-  '/dashboard.html',
-
-  '/perfil.html',
+  // admin / student (IMPORTANTE)
+  '/admin/dashboard.html',
+  '/student/dashboard.html',
 
   '/css/style.css',
-
   '/css/login.css',
-
   '/css/register.css',
 
-  '/css/dashboard.css',
-
-  '/css/perfil.css',
-
   '/js/app.js',
-
   '/js/login.js',
-
   '/js/register.js',
 
-  '/js/dashboard.js',
-
-  '/js/perfil.js',
-
   '/manifest.json'
-
 ]
 
 /* ===== INSTALL ===== */
+self.addEventListener('install', (event) => {
+  console.log('✅ SW instalado')
 
-self.addEventListener(
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(urlsToCache))
+  )
+})
 
-  'install',
+/* ===== FETCH (MEJORADO) ===== */
+self.addEventListener('fetch', (event) => {
 
-  (event) => {
+  const url = new URL(event.request.url)
 
-    console.log('✅ SW instalado')
-
-    event.waitUntil(
-
-      caches.open(CACHE_NAME)
-
-      .then(cache => {
-
-        return cache.addAll(urlsToCache)
-
-      })
-
-    )
-
+  // 🚫 NO cachear APIs
+  if (url.pathname.startsWith('/api')) {
+    return
   }
 
-)
-
-/* ===== FETCH ===== */
-
-self.addEventListener(
-
-  'fetch',
-
-  (event) => {
-
-    event.respondWith(
-
-      caches.match(event.request)
-
-      .then(response => {
-
-        return response || fetch(event.request)
-
-      })
-
-    )
-
+  // 🚫 NO cachear externos
+  if (url.origin !== self.location.origin) {
+    return
   }
 
-)
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => response || fetch(event.request))
+  )
+
+})
 
 /* ===== ACTIVATE ===== */
+self.addEventListener('activate', (event) => {
+  console.log('🔥 SW activado')
 
-self.addEventListener(
-
-  'activate',
-
-  (event) => {
-
-    console.log('🔥 SW activado')
-
-    event.waitUntil(
-
-      caches.keys().then(keys => {
-
-        return Promise.all(
-
-          keys.map(key => {
-
-            if (key !== CACHE_NAME) {
-
-              return caches.delete(key)
-
-            }
-
-          })
-
-        )
-
-      })
-
-    )
-
-  }
-
-)
+  event.waitUntil(
+    caches.keys().then(keys => {
+      return Promise.all(
+        keys.map(key => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key)
+          }
+        })
+      )
+    })
+  )
+})
