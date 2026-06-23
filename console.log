@@ -1,0 +1,303 @@
+{"timestamp":"2026-05-25T21:10:41.594Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-05-25T21:10:41.739Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-25T21:10:41.764Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-25T21:12:19.313Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-05-25T21:12:19.455Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-25T21:12:19.480Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-25T21:12:34.703Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-05-25T21:12:34.854Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-25T21:12:34.884Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-26T02:05:47.723Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-05-26T02:05:47.910Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-26T02:05:47.934Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-26T09:11:20.362Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-05-26T09:11:20.559Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-26T09:11:20.581Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-26T09:28:03.411Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-05-26T09:28:03.602Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-26T09:28:03.624Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-26T13:23:44.857Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-05-26T13:23:45.052Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-26T13:23:45.082Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-26T17:26:21.855Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-05-26T17:26:22.050Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-26T17:26:22.080Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-26T17:26:23.679Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-05-26T17:26:23.817Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-26T17:26:23.838Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-26T20:28:09.973Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-05-26T20:28:10.178Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-26T20:28:10.200Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-26T21:09:11.194Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-05-26T21:09:11.382Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-26T21:09:11.404Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-27T00:07:43.713Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-05-27T00:07:43.909Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-27T00:07:43.932Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-27T07:26:29.822Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-05-27T07:26:30.042Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-27T07:26:30.070Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-27T18:30:40.068Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-05-27T18:30:40.261Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-27T18:30:40.290Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-27T19:09:25.176Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-05-27T19:09:25.360Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-27T19:09:25.384Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-27T23:56:40.333Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-05-27T23:56:40.543Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-27T23:56:40.568Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-28T05:13:11.904Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-05-28T05:13:12.102Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-28T05:13:12.134Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-28T12:53:26.517Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-05-28T12:53:26.698Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-28T12:53:26.754Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-28T18:36:58.135Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-05-28T18:36:58.362Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-28T18:36:58.385Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-28T19:08:29.350Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-05-28T19:08:29.538Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-28T19:08:29.559Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-28T19:50:08.131Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-05-28T19:50:08.335Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-28T19:50:08.362Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-28T23:37:10.261Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-05-28T23:37:10.462Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-28T23:37:10.484Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-29T13:33:32.351Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-05-29T13:33:32.533Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-29T13:33:32.554Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-29T21:44:19.041Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-05-29T21:44:19.226Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-29T21:44:19.248Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-30T01:41:59.921Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-05-30T01:42:00.095Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-30T01:42:00.118Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-30T03:01:10.862Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-05-30T03:01:11.109Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-30T03:01:11.134Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-30T03:36:15.467Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-05-30T03:36:15.679Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-30T03:36:15.710Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-30T05:02:33.571Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-05-30T05:02:33.768Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-30T05:02:33.796Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-30T13:17:21.375Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-05-30T13:17:21.557Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-30T13:17:21.583Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-30T15:44:34.927Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-05-30T15:44:35.137Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-30T15:44:35.162Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-30T17:41:54.810Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-05-30T17:41:55.002Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-30T17:41:55.027Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-30T18:29:57.278Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-05-30T18:29:57.457Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-30T18:29:57.479Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-31T04:18:19.676Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-05-31T04:18:19.909Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-31T04:18:19.936Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-31T07:41:11.652Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-05-31T07:41:11.852Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-31T07:41:11.878Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-31T17:49:56.879Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-05-31T17:49:57.059Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-31T17:49:57.082Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-31T18:38:48.097Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-05-31T18:38:48.303Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-31T18:38:48.329Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-05-31T20:39:18.659Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-05-31T20:39:18.850Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-05-31T20:39:18.873Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-01T06:23:34.815Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-06-01T06:23:35.012Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-01T06:23:35.039Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-01T18:22:50.021Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-06-01T18:22:50.254Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-01T18:22:50.289Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-01T19:33:31.156Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-06-01T19:33:31.350Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-01T19:33:31.375Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-01T21:17:26.162Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-06-01T21:17:26.365Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-01T21:17:26.401Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-01T23:10:00.044Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-06-01T23:10:00.229Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-01T23:10:00.255Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-02T03:32:53.442Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-06-02T03:32:53.636Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-02T03:32:53.670Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-02T05:48:42.710Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-06-02T05:48:42.897Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-02T05:48:42.921Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-02T12:25:14.065Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-06-02T12:25:14.306Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-02T12:25:14.340Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-02T20:58:28.449Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-06-02T20:58:28.665Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-02T20:58:28.693Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-02T22:56:24.099Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-06-02T22:56:24.316Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-02T22:56:24.340Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-03T02:45:57.942Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-06-03T02:45:58.152Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-03T02:45:58.185Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-03T03:58:41.302Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-06-03T03:58:41.510Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-03T03:58:41.538Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-03T12:07:32.932Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-06-03T12:07:33.156Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-03T12:07:33.186Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-03T15:30:25.458Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-06-03T15:30:25.680Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-03T15:30:25.713Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-03T16:59:24.934Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-06-03T16:59:25.159Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-03T16:59:25.186Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-03T20:48:01.279Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-06-03T20:48:01.482Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-03T20:48:01.506Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-04T01:18:47.067Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-06-04T01:18:47.250Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-04T01:18:47.271Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-04T01:44:32.332Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-06-04T01:44:32.475Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-04T01:44:32.497Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-04T02:47:07.210Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-06-04T02:47:07.418Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-04T02:47:07.446Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-04T05:25:13.088Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-06-04T05:25:13.276Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-04T05:25:13.297Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-05T13:43:16.045Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-06-05T13:43:16.250Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-05T13:43:16.277Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-05T17:41:35.308Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-06-05T17:41:35.519Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-05T17:41:35.541Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-06T02:30:59.196Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-06-06T02:30:59.411Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-06T02:30:59.439Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-06T19:03:50.611Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-06-06T19:03:50.793Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-06T19:03:50.816Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-06T19:16:26.840Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-06-06T19:16:27.022Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-06T19:16:27.047Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-07T04:28:29.372Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-06-07T04:28:29.586Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-07T04:28:29.612Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-08T01:56:39.593Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-06-08T01:56:39.809Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-08T01:56:39.832Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-08T07:51:02.722Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-06-08T07:51:03.008Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-08T07:51:03.046Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-08T15:02:03.033Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-06-08T15:02:03.310Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-08T15:02:03.336Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-08T19:05:58.812Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-06-08T19:05:59.002Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-08T19:05:59.025Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-09T02:10:32.641Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-06-09T02:10:32.858Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-09T02:10:32.892Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-09T14:44:06.780Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-06-09T14:44:06.982Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-09T14:44:07.005Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-10T08:29:03.076Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-06-10T08:29:03.321Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-10T08:29:03.346Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-10T11:44:48.150Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-06-10T11:44:48.389Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-10T11:44:48.423Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-11T14:00:27.600Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-06-11T14:00:27.808Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-11T14:00:27.839Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-11T18:27:15.185Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-06-11T18:27:15.406Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-11T18:27:15.428Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-12T01:36:17.895Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-06-12T01:36:18.117Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-12T01:36:18.143Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-12T10:16:15.669Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-06-12T10:16:15.897Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-12T10:16:15.920Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-12T14:29:37.663Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-06-12T14:29:37.875Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-12T14:29:37.904Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-13T03:37:44.370Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-06-13T03:37:44.556Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-13T03:37:44.580Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-14T05:45:10.124Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-06-14T05:45:10.330Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-14T05:45:10.364Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-14T21:27:26.081Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-06-14T21:27:26.289Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-14T21:27:26.316Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-15T04:59:39.450Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-06-15T04:59:39.638Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-15T04:59:39.662Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-16T07:28:47.944Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-06-16T07:28:48.155Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-16T07:28:48.179Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-17T08:44:46.146Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-06-17T08:44:46.343Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-17T08:44:46.369Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-17T13:26:59.465Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-06-17T13:26:59.654Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-17T13:26:59.679Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-18T07:59:34.203Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-06-18T07:59:34.389Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-18T07:59:34.413Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-18T08:22:40.453Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-06-18T08:22:40.676Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-18T08:22:40.698Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-19T00:05:49.016Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-06-19T00:05:49.234Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-19T00:05:49.266Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-19T06:41:00.687Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-06-19T06:41:00.900Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-19T06:41:00.922Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-20T00:27:06.837Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }"}
+{"timestamp":"2026-06-20T00:27:07.036Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-20T00:27:07.065Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-20T06:17:52.840Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }"}
+{"timestamp":"2026-06-20T06:17:53.037Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-20T06:17:53.064Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-20T08:27:57.313Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-06-20T08:27:57.508Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-20T08:27:57.532Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-20T13:48:48.069Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-06-20T13:48:48.258Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-20T13:48:48.280Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-21T01:08:41.364Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-06-21T01:08:41.582Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-21T01:08:41.612Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-21T01:16:02.079Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ override existing { override: true }"}
+{"timestamp":"2026-06-21T01:16:02.221Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-21T01:16:02.240Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-21T03:18:04.185Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-06-21T03:18:04.377Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-21T03:18:04.399Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-21T14:11:34.313Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-06-21T14:11:34.531Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-21T14:11:34.557Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-21T19:20:03.172Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }"}
+{"timestamp":"2026-06-21T19:20:03.437Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-21T19:20:03.468Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-22T04:20:37.803Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-06-22T04:20:37.994Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-22T04:20:38.016Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-22T21:05:53.446Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]"}
+{"timestamp":"2026-06-22T21:05:53.652Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-22T21:05:53.675Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-23T00:50:56.309Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]"}
+{"timestamp":"2026-06-23T00:50:56.495Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-23T00:50:56.516Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-23T05:45:15.306Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }"}
+{"timestamp":"2026-06-23T05:45:15.522Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-23T05:45:15.557Z","level":"LOG","message":"✅ MySQL conectado"}
+{"timestamp":"2026-06-23T14:39:46.139Z","level":"LOG","message":"◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]"}
+{"timestamp":"2026-06-23T14:39:46.327Z","level":"LOG","message":"Servidor funcionando en puerto 3000"}
+{"timestamp":"2026-06-23T14:39:46.349Z","level":"LOG","message":"✅ MySQL conectado"}

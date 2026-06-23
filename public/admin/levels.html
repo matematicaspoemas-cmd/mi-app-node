@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niveles - DAXS English IA</title>
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/admin/levels.css">
+</head>
+
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <h2>DAXS</h2>
+      <p>English IA</p>
+    </div>
+
+    <nav>
+      <a href="/admin/dashboard.html">Dashboard</a>
+      <a href="/admin/levels.html" class="active">Niveles</a>
+      <a href="/admin/lessons.html">Lecciones</a>
+      <a href="/admin/exams.html">Examenes</a>
+      <a href="/admin/payments.html">Pagos</a>
+    </nav>
+
+    <button class="logoutBtn" onclick="logout()">Salir</button>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Plantilla academica</p>
+        <h1>18 niveles de ingles</h1>
+      </div>
+      <div class="adminInfo">
+        <span id="adminName">Admin</span>
+      </div>
+    </header>
+
+    <section class="summary-strip" aria-label="Resumen del programa">
+      <div>
+        <strong>18</strong>
+        <span>Niveles</span>
+      </div>
+      <div>
+        <strong>180</strong>
+        <span>Lecciones</span>
+      </div>
+      <div>
+        <strong>180</strong>
+        <span>Tests</span>
+      </div>
+      <div>
+        <strong>18</strong>
+        <span>Examenes</span>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="Filtros de niveles">
+      <div class="filters" id="levelFilters"></div>
+      <label class="searchBox">
+        <span>Buscar</span>
+        <input id="levelSearch" type="search" placeholder="Nivel, tema o bloque">
+      </label>
+    </section>
+
+    <section class="builderPanel">
+      <form class="builderForm" id="levelForm">
+        <div class="sectionTitle">
+          <h2>Crear nivel</h2>
+          <button type="submit">Guardar nivel</button>
+        </div>
+
+        <div class="formGrid">
+          <label>
+            <span>Nombre</span>
+            <input id="newLevelName" placeholder="Nivel 19">
+          </label>
+          <label>
+            <span>Bloque</span>
+            <select id="newLevelBlock">
+              <option>Basico</option>
+              <option>Intermedio</option>
+              <option>Avanzado</option>
+            </select>
+          </label>
+          <label>
+            <span>Titulo</span>
+            <input id="newLevelTitle" placeholder="Conversacion para negocios">
+          </label>
+          <label>
+            <span>Duracion</span>
+            <input id="newLevelDuration" value="1 mes">
+          </label>
+        </div>
+
+        <label>
+          <span>Descripcion</span>
+          <textarea id="newLevelDescription" placeholder="Describe que aprendera el estudiante en este nivel."></textarea>
+        </label>
+      </form>
+
+      <article class="previewPanel" id="levelLivePreview"></article>
+    </section>
+
+    <section class="workspace">
+      <div class="level-list" id="levelList" aria-label="Listado de niveles"></div>
+
+      <article class="level-detail" id="levelDetail" aria-label="Detalle del nivel"></article>
+    </section>
+  </main>
+
+  <script src="/js/admin.js"></script>
+  <script src="/js/admin/curriculum-data.js"></script>
+  <script src="/js/admin/content-store.js"></script>
+  <script src="/js/admin/levels.js"></script>
+</body>
+
+</html>

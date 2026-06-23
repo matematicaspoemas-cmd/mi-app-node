@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagos - DAXS English IA</title>
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/admin/levels.css">
+</head>
+
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <h2>DAXS</h2>
+      <p>Pagos</p>
+    </div>
+
+    <nav>
+      <a href="/admin/dashboard.html">Dashboard</a>
+      <a href="/admin/levels.html">Niveles</a>
+      <a href="/admin/lessons.html">Lecciones</a>
+      <a href="/admin/exams.html">Examenes</a>
+      <a href="/admin/payments.html" class="active">Pagos</a>
+    </nav>
+
+    <button class="logoutBtn" onclick="logout()">Salir</button>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Control de acceso</p>
+        <h1>Pagos y desbloqueo</h1>
+      </div>
+    </header>
+
+    <section class="tableContainer">
+      <h2>Estados sugeridos por nivel</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nivel</th>
+            <th>Bloque</th>
+            <th>Condicion academica</th>
+            <th>Pago</th>
+            <th>Acceso</th>
+          </tr>
+        </thead>
+        <tbody id="paymentRows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/js/admin.js"></script>
+  <script src="/js/admin/curriculum-data.js"></script>
+  <script src="/js/admin/content-store.js"></script>
+  <script>
+    const paymentRows = document.getElementById('paymentRows')
+
+    paymentRows.innerHTML = DaxsAdminStore.getLevels().map((level) => {
+      const paid = level.id === 1 ? 'Confirmado' : 'Pendiente'
+      const access = level.id === 1 ? 'Disponible' : 'Bloqueado'
+
+      return `
+        <tr>
+          <td>${level.name}</td>
+          <td>${level.block}</td>
+          <td>10 lecciones + examen ${level.exam.passingScore}%</td>
+          <td>${paid}</td>
+          <td>${access}</td>
+        </tr>
+      `
+    }).join('')
+  </script>
+</body>
+
+</html>

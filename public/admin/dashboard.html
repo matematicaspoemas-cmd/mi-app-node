@@ -4,112 +4,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard - DAXS</title>
-
+  <title>Admin Dashboard - DAXS English IA</title>
   <link rel="stylesheet" href="/css/admin.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin/levels.css">
 </head>
 
 <body>
-
-<!-- 🔐 PROTECCIÓN -->
-<script>
-  const user = JSON.parse(localStorage.getItem("user"));
-
-  if (!user || user.rol !== "admin") {
-    window.location.href = "/login.html";
-  }
-</script>
-
-<div class="layout">
-
-  <!-- SIDEBAR -->
   <aside class="sidebar">
-
     <div class="logo">
-      <h2>⚡ DAXS</h2>
+      <h2>DAXS</h2>
       <p>Admin Panel</p>
     </div>
 
     <nav>
-      <button onclick="showSection('levels')">📚 Niveles</button>
-      <button onclick="showSection('lessons')">🧠 Lecciones</button>
-      <button onclick="showSection('files')">📂 Archivos</button>
+      <a href="/admin/dashboard.html" class="active">Dashboard</a>
+      <a href="/admin/levels.html">Niveles</a>
+      <a href="/admin/lessons.html">Lecciones</a>
+      <a href="/admin/exams.html">Examenes</a>
+      <a href="/admin/payments.html">Pagos</a>
     </nav>
 
-    <button class="logout" onclick="logout()">🚪 Salir</button>
-
+    <button class="logoutBtn" onclick="logout()">Salir</button>
   </aside>
 
-  <!-- MAIN -->
   <main class="main">
-
     <header class="topbar">
-      <h1>Bienvenido, <span id="adminName">Admin</span> 👑</h1>
+      <div>
+        <p class="eyebrow">Panel de control</p>
+        <h1>Bienvenido, <span id="adminName">Admin</span></h1>
+      </div>
     </header>
 
-    <!-- CARDS -->
-    <section class="cards">
-
-      <div class="card">
-        <h3>Niveles</h3>
-        <p>0</p>
+    <section class="summary-strip" aria-label="Resumen academico">
+      <div>
+        <strong id="dashboardTotalLevels">18</strong>
+        <span>Niveles mensuales</span>
       </div>
-
-      <div class="card">
-        <h3>Lecciones</h3>
-        <p>0</p>
+      <div>
+        <strong id="dashboardTotalLessons">180</strong>
+        <span>Lecciones</span>
       </div>
-
-      <div class="card">
-        <h3>Usuarios</h3>
-        <p>0</p>
+      <div>
+        <strong id="dashboardTotalTests">180</strong>
+        <span>Tests de leccion</span>
       </div>
-
+      <div>
+        <strong id="dashboardTotalExams">18</strong>
+        <span>Examenes de nivel</span>
+      </div>
     </section>
 
-    <!-- SECTIONS -->
-
-    <section id="levels" class="section active">
-
-      <h2>📚 Crear Nivel</h2>
-
-      <div class="form">
-        <input id="levelName" placeholder="Nombre del nivel">
-        <button onclick="createLevel()">Crear</button>
+    <section class="detailBand">
+      <div>
+        <h2>Ruta academica</h2>
+        <p>
+          El programa esta dividido en Basico, Intermedio y Avanzado. Cada nivel dura
+          un mes, contiene 10 lecciones, 10 tests, 10 tareas, pruebas de pronunciacion
+          revisadas por IA y un examen final para desbloquear el siguiente nivel.
+        </p>
       </div>
-
+      <div class="examBox">
+        <strong>Desbloqueo</strong>
+        <span>Lecciones completadas</span>
+        <span>Examen aprobado</span>
+        <span>Pago confirmado</span>
+      </div>
     </section>
 
-    <section id="lessons" class="section">
+    <section class="builderPanel">
+      <form class="builderForm" id="dashboardLevelForm">
+        <div class="sectionTitle">
+          <h2>Crear nivel</h2>
+          <button type="submit">Guardar nivel</button>
+        </div>
 
-      <h2>🧠 Crear Lección</h2>
+        <div class="formGrid">
+          <label>
+            <span>Nombre</span>
+            <input id="dashboardLevelName" placeholder="Nivel 19">
+          </label>
+          <label>
+            <span>Bloque</span>
+            <select id="dashboardLevelBlock">
+              <option>Basico</option>
+              <option>Intermedio</option>
+              <option>Avanzado</option>
+            </select>
+          </label>
+        </div>
 
-      <div class="form">
-        <input id="lessonTitle" placeholder="Título">
-        <textarea id="lessonContent" placeholder="Contenido"></textarea>
-        <button onclick="createLesson()">Guardar</button>
-      </div>
+        <label>
+          <span>Titulo</span>
+          <input id="dashboardLevelTitle" placeholder="Ingles para entrevistas">
+        </label>
 
+        <label>
+          <span>Descripcion</span>
+          <textarea id="dashboardLevelDescription" placeholder="Describe el objetivo del nivel."></textarea>
+        </label>
+      </form>
+
+      <article class="previewPanel" id="dashboardLevelPreview"></article>
     </section>
 
-    <section id="files" class="section">
+    <section class="builderPanel">
+      <form class="builderForm" id="dashboardLessonForm">
+        <div class="sectionTitle">
+          <h2>Crear leccion</h2>
+          <button type="submit">Guardar leccion</button>
+        </div>
 
-      <h2>📂 Subir Archivo</h2>
+        <label>
+          <span>Nivel</span>
+          <select id="dashboardLessonLevel"></select>
+        </label>
 
-      <div class="form">
-        <input type="file" id="fileInput">
-        <button onclick="uploadFile()">Subir</button>
-      </div>
+        <div class="formGrid">
+          <label>
+            <span>Numero</span>
+            <input id="dashboardLessonNumber" type="number" min="1" max="10" value="1">
+          </label>
+          <label>
+            <span>Titulo</span>
+            <input id="dashboardLessonTitle" placeholder="Leccion 1: Presentaciones">
+          </label>
+        </div>
 
+        <label>
+          <span>Contenido</span>
+          <textarea id="dashboardLessonContent" placeholder="Contenido principal de la leccion."></textarea>
+        </label>
+
+        <label>
+          <span>Tarea</span>
+          <textarea id="dashboardLessonHomework" placeholder="Tarea para el estudiante."></textarea>
+        </label>
+      </form>
+
+      <article class="previewPanel" id="dashboardLessonPreview"></article>
     </section>
 
+    <section>
+      <div class="sectionTitle">
+        <h2>Bloques del curso</h2>
+        <a href="/admin/levels.html">Ver plantilla completa</a>
+      </div>
+      <div class="cards" id="programBlocks"></div>
+    </section>
   </main>
 
-</div>
+  <script src="/js/admin.js"></script>
+  <script src="/js/admin/curriculum-data.js"></script>
+  <script src="/js/admin/content-store.js"></script>
+  <script src="/js/admin/dashboard-builder.js"></script>
+  <script>
+    const blockContainer = document.getElementById('programBlocks')
+    const blockCounts = DaxsAdminStore.getLevels().reduce((acc, level) => {
+      acc[level.block] = (acc[level.block] || 0) + 1
+      return acc
+    }, {})
 
-<script src="/js/admin.js"></script>
-
+    blockContainer.innerHTML = Object.entries(blockCounts).map(([block, count]) => `
+      <article class="card">
+        <h3>${block}</h3>
+        <p>${count}</p>
+        <small>niveles mensuales</small>
+      </article>
+    `).join('')
+  </script>
 </body>
+
 </html>
