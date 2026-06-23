@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<!-- ===== FAVICON ===== -->
+
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="/assets/icons/favicon.ico"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/assets/icons/icon-192.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="/assets/icons/icon-192.png"
+  >
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+      href="/css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+  <h2>🚀 DAXS APP</h2>
+
+  <img
+    id="fotoPerfil"
+    src="/assets/default.png"
+    class="fotoPerfil"
+  />
+
+  <p id="userName" class="loading">
+    Cargando usuario...
+  </p>
+
+  <button id="perfilBtn">
+    👤 Actualizar Perfil
+  </button>
+
+  <button id="logoutBtn">
+    🚪 Cerrar sesión
+  </button>
+
+</div>
+
+<div class="main">
+
+  <h1>Dashboard</h1>
+
+  <div class="card">
+
+    <h3>📊 Estado del usuario</h3>
+
+    <p id="email" class="loading">
+      Cargando...
+    </p>
+
+    <p id="rol" class="loading">
+      Cargando...
+    </p>
+
+  </div>
+
+  <div class="card">
+
+    <h3>🔥 Progreso</h3>
+
+    <p>
+      Lecciones completadas: 0
+    </p>
+
+  </div>
+
+</div>
+
+<script src="/js/app.js"></script>
+
+<script src="/js/dashboard.js"></script>
+
+
+
+</body>
+</html>

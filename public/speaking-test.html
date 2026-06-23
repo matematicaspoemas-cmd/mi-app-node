@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DAXS English IA</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+    background:#222;
+    padding:30px;
+    border-radius:20px;
+}
+
+.question{
+    font-size:30px;
+    margin:30px 0;
+    color:#00ff88;
+}
+
+button{
+    padding:15px 25px;
+    border:none;
+    border-radius:10px;
+    background:#00ff88;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.8;
+}
+
+#result{
+    margin-top:30px;
+    font-size:22px;
+}
+
+.score{
+    font-size:40px;
+    color:#00ff88;
+    margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎤 DAXS English IA</h1>
+
+<h2>Speaking Test</h2>
+
+<div class="question" id="question">
+What is your name?
+</div>
+
+<button onclick="startRecognition()">
+🎙️ Answer
+</button>
+
+<div id="result"></div>
+
+<div class="score" id="score"></div>
+
+</div>
+
+<script>
+
+const questions = [
+
+{
+question:"What is your name?",
+answer:"my name is"
+},
+
+{
+question:"How are you today?",
+answer:"i am"
+},
+
+{
+question:"What is your favorite color?",
+answer:"my favorite color"
+}
+
+]
+
+let currentQuestion = 0
+let totalScore = 0
+
+function startRecognition(){
+
+const recognition =
+new webkitSpeechRecognition()
+
+recognition.lang = 'en-US'
+
+recognition.start()
+
+recognition.onresult = function(event){
+
+const transcript =
+event.results[0][0].transcript.toLowerCase()
+
+document.getElementById('result').innerHTML =
+
+`
+<p>🗣️ Your answer:</p>
+<p><strong>${transcript}</strong></p>
+`
+
+checkAnswer(transcript)
+
+}
+
+}
+
+function checkAnswer(transcript){
+
+const expected =
+questions[currentQuestion].answer
+
+if(transcript.includes(expected)){
+
+totalScore += 10
+
+document.getElementById('result').innerHTML +=
+`
+<p style="color:#00ff88;">
+✅ Good answer!
+</p>
+`
+
+}else{
+
+document.getElementById('result').innerHTML +=
+`
+<p style="color:red;">
+❌ Try again
+</p>
+`
+
+}
+
+currentQuestion++
+
+if(currentQuestion < questions.length){
+
+setTimeout(()=>{
+
+document.getElementById('question').innerHTML =
+questions[currentQuestion].question
+
+document.getElementById('result').innerHTML=''
+
+},2000)
+
+}else{
+
+showFinalScore()
+
+}
+
+}
+
+function showFinalScore(){
+
+document.getElementById('question').innerHTML =
+'🏁 Exam Finished'
+
+document.getElementById('score').innerHTML =
+`Final Score: ${totalScore}/30`
+
+}
+
+</script>
+
+</body>
+
+</html>
